@@ -699,6 +699,7 @@ p.card__deposit__value {
 .wrapp__top__info__feedback {
     display: flex;
     justify-content: space-between;
+	width: 100%;
 }
 
 h4 {
