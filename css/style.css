@@ -32,7 +32,7 @@ html {
 
 body {
       margin: 0;
-      background-color: #F9FDF6;
+      background-color: #fbfbfb;
            
 }
 
@@ -1856,16 +1856,14 @@ a.socials__link:hover {
   
   .month__before {
     position: absolute;
-    top: 0;
-    left: 0;
+    left: 10px;
     background-color: transparent;
     border: none;
   }
   
   .month__after {
     position: absolute;
-    top: 0;
-    right: 0;
+    right: 10px;
     background-color: transparent;
     border: none;
   }
@@ -1926,9 +1924,13 @@ a.socials__link:hover {
     text-align: center;
   }
   
-  .calendar__static .not__available {
+  .not__available {
     color: #a4a4a4;
     text-decoration: line-through;
+  }
+
+  .not__available.booking {
+    color: #FF7067;
   }
 
 .owner__data {
@@ -2506,16 +2508,21 @@ h1.main__card__name {
 }
 
 .profile-menu {
-    width: 1170px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 80px;
     text-align: start;
     overflow: hidden;
     position: relative;
+    background-color: #FAF8D8;
 }
 
 .profile-menu__list {
+    width: 1170px;;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
     display: flex;
     list-style: none;
     justify-content: flex-start;
@@ -2533,23 +2540,13 @@ h1.main__card__name {
     color: #4A4A4A;
 }
 
-.profile-menu__item::after {
-    content: "";
-    display: block;
-    width: 100%;
-    background-color:#4A4A4A;
-    height: 1px;
-  
-    
-}
-
 .profile-menu__item:hover::after,
 .profile-menu__item:active::after,
 .profile-menu__item:focus::after,
 .profile-menu__item__active::after {
     content: "";
     display: block;
-    background-color: #73D614;
+    background-color: #FFBB2E;
     height: 3px;
     margin-top: -1px; 
     border-radius: 6px;
@@ -2561,19 +2558,14 @@ h1.main__card__name {
 .profile-menu__item__active {
     content: "";
     display: block;
-    color: #73D614;
+    color: #FFBB2E;
     font-weight: 700;
     width: calc(1170px/5);
 }
 
 .profile-menu__item__active a {
-    color: #73D614;
+    color: #FFBB2E;
     font-weight: 700;
-}
-
-.account__profile {
-    background-image: url(../img/pattern_b2r.png);
-    background-size: cover;
 }
 
 .account__profile .content {
@@ -2682,6 +2674,7 @@ text-align: center;
 }
 
 .textarea__profile.form__field {
+    box-sizing: border-box;
     max-width: 100%;
     min-width: 100%;
     min-height: 80px;
@@ -2905,7 +2898,7 @@ text-align: center;
     .profile-menu {
         box-sizing: border-box;
         width: 100%;
-        margin-top: 60px;
+        margin-top: 50px;
         flex-wrap: nowrap;
         overflow-y: hidden;
     }
@@ -3392,12 +3385,17 @@ text-align: center;
     padding: 8px 0 0 0;
     display: flex;
     list-style: none;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .nav__pages__item:nth-last-child(n+2) {
     margin-right: 1rem;
     
+}
+
+.text.nav__pages__item {
+    color: #A4A4A4;
+    font-size: 0.875rem;
 }
 
 .active.nav__pages__item a {
@@ -3568,7 +3566,7 @@ text-align: center;
 .photos__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+
 }
 
 .delete__photo {
@@ -3636,7 +3634,7 @@ text-align: center;
     -o-transform: scale(1.1);
 }
 
-.form__rent__steps .add__photo__text {
+p.add__photo__text {
     font-size: 0.875rem;
     color: #73D614;
     font-weight: 700;
@@ -3853,11 +3851,493 @@ textarea.form__field {
     }
 }
 
+/**end ret steps**/
 
+/**account pages**/
 
+.my__items .content {
+    box-sizing: border-box;
+    width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-bottom: 240px;
+}
 
+.account.card {
+    margin-right: 22px;
+    margin-bottom: 22px;
+}
 
+.card__preview__wrap {
+    width: 270px;
+    height: 220px;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
 
+.manage__items {
+    width: 40%;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.7;
+    z-index: 5;
+}
+
+.edit__item {
+    background-image: url(../svg/edit.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+}
+
+.publish {
+    position: absolute;
+}
+
+.icon-publish::before {
+    content: "";
+    display: inline-block;
+    background-image: url(../svg/remove_publish_item.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    
+}
+
+.publish:checked ~ .icon-publish::before {
+    background-image: url(../svg/publish_item.svg); 
+}
+
+.manage__items .delete__photo {
+    position: static;
+}
+
+.account.card:hover .card__photo__overlay {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.account.card:hover img {
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.account.card:hover .manage__items {
+    opacity: 1;
+}
+
+.not__published__overlay {
+    display: none;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.not__published__overlay p {
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    position: absolute;
+    top: 40%;
+    left: calc(50% - 85px);
+}
+
+.account.card.not__published .not__published__overlay {
+    display: block;
+
+}
+
+.my__items .wrap__nav__row {
+   width: 100%;
+   margin-bottom: -50px;
+}
+
+@media (max-width: 1365px) and (min-width: 768px) {
+    .my__items .content {
+        width: 100%;
+        padding: 0 100px;
+    }
+
+    .account .card__photo__preview, .account .card__photo__overlay, .account.card {
+        width: 270px;
+    }
+
+    .my__items .wrap__nav__row {
+        margin-bottom: 130px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .my__items .content {
+        width: 100%;
+        padding: 0;
+    }
+
+    .my__items .wrap__nav__row {
+        margin-bottom: 60px;
+    }
+
+}
+
+/*edit my item*/
+
+.my__items {
+    background-color: #fbfbfb;
+}
+
+.block__rent-price__available {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rent__price-period {
+    width: 570px;
+    margin-right: 30px;
+}
+
+.my__items h2 {
+    font-size: 1.5rem;
+    color: #4A4A4A;
+    margin-top: 0;
+}
+
+.hint__text {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #A4A4A4;
+    font-size: 1rem;
+}
+
+.min__period.form__field__row {
+    display: flex;
+    width: 100%;  
+}
+
+.field__row__wrap:first-child {
+    margin-right: 39px;
+}
+
+.my__items .min__period.form__field {
+    width: 50%;
+}
+
+.hint__text.dark {
+    color: #4A4A4A;
+}
+
+.legend__calendar {
+    margin: 1rem 0;
+}
+
+.legend__calendar .row {
+    display: flex;
+}
+
+.my__items .calendar__static {
+    box-sizing: border-box;
+    padding: 16px;
+    background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.my__items .not__available, .my__items .not__available {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.my__items td.not__available, .my__items td.not__available {
+    margin-bottom: 0;
+}
+
+.general__info {
+    margin-top: -150px;
+}
+
+.general__info, .locate__info {
+    width: 570px;
+    margin-bottom: 2rem;
+}
+
+.my__items textarea.form__field {
+    min-height: 50px;
+}
+
+.my__items .transparent__button, .my__items .green__button {
+    margin-left: 0;
+}
+
+.my__items .transparent__button {
+    margin-right: 30px;
+}
+
+@media (max-width: 1365px) and (min-width: 320px) {
+
+    .block__rent-price__available {
+        flex-direction: column;
+
+    }
+
+    .rent__price-period {
+        width: 100%;
+    }
+
+    .general__info, .locate__info {
+        width: 100%;
+    }
+
+    .general__info, .available {
+        margin-top: 2rem;
+    }
+
+    .photos__container {
+        justify-content: center;
+    }
+
+    .my__items .transparent__button {
+        margin-right: 20px;
+    }
+
+    .field__row__wrap:first-child {
+        margin: 0;
+    }
+
+    .my__items .content {
+        box-sizing: border-box;
+        padding-bottom: 160px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+
+    .my__items .calendar__static {
+        width: 280px;
+        padding: 6px 0 0 0;
+    }
+
+    .my__items .content {
+        box-sizing: border-box;
+        padding: 0 12px 60px 12px;
+    }
+
+    .my__items .transparent__button {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+}
+
+/*end edit my item*/
+/** end my items**/
+
+/**my favorite items**/
+
+.my__favorites .content {
+    box-sizing: border-box;
+    width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-bottom: 240px;
+}
+
+.favorite__cards__container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.my__favorites .card {
+    margin-right: 22px;
+    margin-bottom: 22px;
+}
+
+.my__favorites .wrap__nav__row {
+    width: 100%;
+}
+
+@media (max-width: 1365px) and (min-width: 320px) {
+
+    .my__favorites .content {
+        width: 100%;
+        padding: 0 100px;
+    }
+
+    .my__favorites .card {
+        width: 270px;
+    }
+
+    .my__favorites {
+        margin-bottom: 130px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+
+    .my__favorites .content {
+        padding: 0 100px;
+    }
+
+    .my__favorites {
+        margin-bottom: 60px;
+    }
+
+}
+
+/**end my favorite items**/
+
+/**legal profile**/
+
+.inn_kpp, .ogrn, .bank__info__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+.ogrn .form__field {
+    width: 75%;
+    
+}
+
+.account__profile h3 {
+    font-size: 1.125rem;
+    margin: 0;
+}
+
+.inn_kpp_fields {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.inn_kpp_fields .form__field {
+    width: 48%;
+    margin-bottom: 0;
+}
+
+.bank__info {
+    margin-top: -110px;
+    width: 620px;
+}
+
+.bik.bank__info__row {
+    width: 50%;
+}
+
+.bik.form__field {
+    width: 68%;
+}
+
+.bank.form__field {
+    width: 84%;
+}
+
+.bank__info textarea.form__field {
+    min-width: 84%;
+    max-width: 84%;
+    min-height: 50px;
+    max-height: 190px;
+}
+
+@media (max-width: 1365px) and (min-width: 320px) {
+    .bank__info {
+        margin: 0;
+        width: 100%;
+    }
+
+    .legal.account__profile .personal__data {
+        margin: 0;
+    }
+
+    .inn_kpp, .ogrn, .bank__info__row {
+        margin-bottom: 10px;
+    }
+}
+
+/**end legal profile **/
+
+/**404**/
+
+.content__404 {
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 120px;
+}
+
+.text__404 {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page__404 h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #FFBB2E;
+}
+
+.page__404 h2 {
+    font-size: 1.5rem;
+    
+}
+
+.page__404 .search__field {
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    background: none;
+}
+
+.page__404 .searh__form__catalogue {
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 1365px) and (min-width: 320px) {
+    .content__404 {
+        width: 100%;
+    }
+
+    .text__404 {
+        width: 80%;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+
+    .content__404 {
+        margin-top: 75px;
+        margin-bottom: 60px;
+        
+    }
+
+}   
 
 
 
