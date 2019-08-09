@@ -4138,6 +4138,7 @@ textarea.form__field {
     .my__items .content {
         box-sizing: border-box;
         padding: 0 12px 60px 12px;
+        justify-content: center;
     }
 
     .my__items .transparent__button {
@@ -4197,7 +4198,11 @@ textarea.form__field {
 @media (max-width: 767px) and (min-width: 320px) {
 
     .my__favorites .content {
-        padding: 0 100px;
+        padding: 0 12px;
+    }
+
+    .favorite__cards__container {
+        justify-content: center;
     }
 
     .my__favorites {
