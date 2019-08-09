@@ -685,7 +685,7 @@ p.card__deposit__value {
     border-radius: 10px;
     width: 570px;
     height: 232px;
-    padding: 36px;
+    padding: 2.125rem;
     margin-bottom: 30px; 
 }
 
@@ -2527,6 +2527,7 @@ h1.main__card__name {
     list-style: none;
     justify-content: flex-start;
     padding: 0;
+    align-items: baseline;
 }
 
 .profile-menu__item {
@@ -4344,16 +4345,677 @@ textarea.form__field {
 
 }   
 
+/**end 404**/
+
+/**profile preview**/
+
+.profile__preview {
+    width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 120px;
+    padding-bottom: 240px;
+}
+
+.wrap__personal__info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile__preview .deals__owner__info {
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.profile__preview .rate__owner {
+    width: 100%;
+    justify-content: center;
+}
+
+.profile__preview .number__deals {
+    justify-content: center;
+}
+
+.profile__preview .number__deals p {
+    margin-top: 0;
+}
+
+.main__personal__info {
+    box-sizing: border-box;
+    padding-bottom: 16px;
+    width: 65%;
+    max-height: 200px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.profile__preview h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #4A4A4A;
+}
+
+.profile__preview .hint__text {
+    color: #4A4A4A;
+    margin-bottom: 0;
+}
+
+.profile__preview .sub__hint__text {
+    font-size: 0.875rem;
+    color: #A4A4A4;
+    margin-top: 4px;
+}
+
+.icon__tel-value, .e-mail__info {
+    display: flex;
+}
+
+.tel__info, .e-mail__info {
+    margin-bottom: 12px;
+}
+
+.icon.tel {
+    background-image: url(../svg/phone.svg);
+    background-size: 20px;
+    width: 36px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: top right 12px;
+}
+
+.icon.e-mail {
+    background-image: url(../svg/mail.svg);
+    background-size: 20px;
+    width: 36px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: top right 12px;
+}
+
+.profile__preview .string__button {
+    margin: 0;
+}
+
+.feedback__profile, .items__profile {
+    margin-top: 3.5rem;
+}
+
+.feedback__cards__container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile__preview .feedback__card {
+    background: none;
+    box-shadow: none;
+    margin-bottom: 0;
+}
+
+.profile__preview .user__location__feedback {
+    display: none;
+}
+
+.profile__preview .add__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile__preview .cards__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.profile__preview .card {
+    margin-left: 22px;
+    margin-bottom: 22px;
+}
+
+@media (max-width: 1365px) and (min-width: 320px) {
+
+    .profile__preview {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 20px 160px 20px;
+        margin-top: 80px;
+    }
+
+    .profile__preview .card {
+        width: 270px;
+    }
+
+    .main__personal__info {
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+
+    .profile__preview {
+        padding: 0 12px 160px 12px;
+
+    }
+
+    .wrap__personal__info {
+        flex-direction: column;
+    }
+
+    .main__personal__info {
+        width: 100%;
+    }
+
+    .profile__preview .feedback__card {
+        height: 100%;
+        padding: 1.5rem;
+    }
+
+    .profile__preview .transparent__button {
+        margin-top: 24px;
+    }
+
+    .cards__container {
+        justify-content: center;
+    }
+
+}
+
+/**end profile preview**/
+
+/**account my orders**/
+
+.my__orders .content {
+    box-sizing: border-box;
+    width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    padding-bottom: 240px;
+}
+
+.orders__container {
+    box-sizing: border-box;
+    padding: 0 100px;
+}    
+
+.order, .message {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.order:nth-last-child(n+2), 
+.message:nth-last-child(n+2) {
+    margin-bottom: 1rem;
+}
+
+.order:hover,
+.message:hover {
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
+    transition-duration: 0.4s;
+}
+
+.item__order__preview {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 15%;
+    align-self: center;
+}
+
+.my__orders h3 {
+    margin: 0;
+    font-size: 1.125rem;
+}
+
+.my__orders .hint__text {
+    color: #4A4A4A;
+    margin-top: 2px;
+}
+
+.my__orders .sub__hint__text {
+    color: #A4A4A4;
+    font-size: 0.875rem;
+    margin-bottom: 4px;
+}
+
+.order__line {
+    display: flex;
+    flex-direction: column;
+}
+
+.order__line.lot__info {
+    width: 40%;
+}
+
+.order__line.owner__info {
+    width: 25%;
+}
+
+.order__line.rent__period {
+    width: 20%;
+}
 
 
+@media (max-width: 1365px) and (min-width: 320px) {
+
+    .my__orders .content {
+        width: 100%;
+        padding: 0 20px 160px 20px;
+    }
+    
+    .item__order__preview {
+        max-width: 100%;
+        width: 100;
+        height: auto;
+    }
+
+    .orders__container {
+        padding: 0;
+    }
+
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+    
+    .order {
+        flex-direction: column;
+    }
+
+    .my__orders .content {
+        padding: 0 12px 80px 12px;
+    }
+
+    .item__order__preview {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .order__line.lot__info, .order__line.owner__info,
+    .order__line.rent__period {
+        width: 100%;
+        align-self: flex-start;
+    } 
+
+}
+
+/**end account my orders**/
+
+/**account my messages**/
+
+.number__messages {
+    font-size: 1rem;
+    color: #a4a4a4;
+    vertical-align: super;
+    font-weight: 400;
+    margin: 0;
+}
+
+.number__messages.new {
+    display: none;
+    color: #73D614;
+    font-weight: 700;
+    vertical-align: super;
+}
+
+.my__messages .content {
+    box-sizing: border-box;
+    width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    padding-bottom: 240px;
+}
+
+.messages__container {
+    box-sizing: border-box;
+    padding: 0 100px; 
+}
+
+.avatar__60 {
+    align-self: center;
+    max-width: 15%;
+}
+
+.avatar__60 img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 8rem;
+    
+}
+
+.message__line__name__lot {
+    width: 63%;
+}
+
+.message__line__owner {
+    width: 15%;
+}
+
+.message__line__date {
+    width: 7%;
+}
+
+.message__line__name__lot,
+.message__line__owner,
+.message__line__date {
+    margin-top: 16px;
+}
 
 
+@media (max-width: 1365px) and (min-width: 320px) {
+
+    .my__messages .content {
+        width: 100%;
+        padding: 0 20px 160px 20px;
+    }
+    
+    .avatar__60 {
+        max-width: 100%;
+        width: 100;
+        height: auto;
+    }
+
+    .messages__container {
+        padding: 0;
+    }
+
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+    
+    .message {
+        flex-direction: column;
+    }
+
+    .my__messages .content {
+        padding: 0 12px 80px 12px;
+    }
+
+    .avatar__60 {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .message__line__name__lot,
+    .message__line__owner,
+    .message__line__date {
+        width: 100%;
+        margin-top: 0;
+    }
+   
+}
+
+/**end account my messages**/
+
+/**chat**/
+
+.chat__body {
+    box-sizing: border-box;
+    padding: 0 100px;
+    
+}
+
+.chat__header {
+    background: #73D614;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px 5px 0px 0px;
+    padding: 16px;
+    display: flex;
+}
+
+.chat__owner__info {
+    display: flex;
+    width: 35%;
+}
+
+.chat__body .avatar__60 {
+    max-width: 30%;
+    align-items: center;
+}
+
+.chat__name__visit {
+    padding: 0 12px;
+}
+
+.chat__name__owner {
+    font-size: 1.125rem;
+    color: white;
+    font-weight: 700;
+    margin: 6px 0;
+}
+
+.time__visit {
+    font-size: 1rem;
+    color: white;
+    font-weight: 400;
+    margin: 6px 0;
+}
+
+.chat__preview__name {
+    display: flex;
+    align-items: center;
+}
+
+.chat__preview__name img {
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 5px;
+}
+
+.chat__body h3 {
+    color: white;
+    font-size: 1.125rem;
+    margin: 6px 12px;
+}
+
+.chat__window {
+    box-sizing: border-box;
+    border-left: #73D614 2px solid;
+    border-right: #73D614 2px solid;
+    min-height: 40vh;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.user__message {
+    text-align: right;
+    margin-bottom: 1.5rem;
+}
+
+.user__message .first__row {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user__message .avatar__48 {
+    order: 2;
+    align-self: flex-end;
+    margin-bottom: 1.5rem;
+}
+
+.avatar__48 img {
+    width: 48px;
+    height: 48px;
+    border-radius: 96px;
+}
+
+.chat__message {
+    box-sizing: border-box;
+    margin-right: 0.5rem;
+    max-width: 85%;
+}
+
+.wrap__text__message {
+    background: #F6F6F6;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 0 8px;
+    text-align: left;
+}
+
+.text__message {
+    font-size: 1rem;
+    color: #4A4A4A;
+    margin: 0;
+}
+
+.message__date {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.text__message__date {
+    margin: 6px;
+    font-size: 0.75rem;
+    color: #A4A4A4;
+}
+
+.sent {
+    background-image: url(../svg/sent.svg);
+    background-size: 16px;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.delivered {
+    background-image: url(../svg/delivered.svg);
+    background-size: 16px;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.viewed {
+    background-image: url(../svg/viewed.svg);
+    background-size: 16px;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+.none.sent, .none.delivered, .none.viewed {
+    display: none;
+}
 
 
+.agent__message {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
 
+.agent__message .first__row {
+    display: flex;
+    justify-content: flex-start;
+}
 
+.agent__message .chat__message {
+    margin: 0 0 0 0.5rem;
+}
 
+.agent__message .avatar__48 {
+    align-self: flex-end;
+    margin-bottom: 1.5rem;
+}
 
+.agent__message .message__date {
+    justify-content: flex-start;
+}
 
+.form__send__message {
+    background: #73D614;
+    border-radius: 0px 0px 5px 5px ;
+    box-shadow: 0px -2px 3px rgba(0, 0, 0, 0.15);
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+}
 
+.form__send__message form {
+    width: 100%;
+    display: flex;
+}
+
+.chat.form__field {
+    min-width: 80%;
+    max-width: 80%;
+    min-height: 60px;
+    max-height: 100px;
+    background: white;
+    border: none;
+    margin: 0;
+}
+
+.white.string__button {
+    color: white;
+    font-weight: 700;
+    margin-left: 30px;
+    margin-top: 0;
+}
+
+.white.string__button svg {
+    margin: 0 12px -5px 0;
+}
+
+.chat.transparent__button {
+    margin-top: 48px;
+    float: right;
+}
+
+.chat.my__messages {
+    padding-bottom: 80px;
+}
+
+@media (max-width: 1365px) and (min-width: 320px) {
+    .chat__body {
+        padding: 0;
+    }
+
+    .white.string__button {
+        display: block;
+    }
+
+    .white.string__button span {
+        display: none;
+    }
+
+    .chat__owner__info, .chat__preview__name {
+        align-items: flex-start;
+    }
+
+    .chat__body .avatar__60 {
+        align-self: flex-start;
+        padding: 0 12px;
+        max-width: 20%;
+    }
+
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .chat__header {
+        flex-direction: column;
+    }
+
+    .chat__owner__info {
+        width: 100%;
+    }
+
+    .chat__body .avatar__60 {
+        align-self: flex-start;
+        padding: 0;
+        max-width: 0;
+
+        margin-right: 46px;
+    }
+}
 
