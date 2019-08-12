@@ -2656,16 +2656,18 @@ text-align: center;
 .form__field, input.form__field {
     box-sizing: border-box;
     width: 100%;
-    background-color: #F7FFEB;
-    border: 2px solid rgba(115, 214, 20, 0.5);
+    background-color: #FFFFFF;
+    border: 2px solid #A4A4A4;
     height: 40px;
     border-radius: 5px;
     padding: 0 16px;
     -webkit-appearance: none;
+    -moz-appearance: none;
     color: #979797;
     font-size: 0.875rem;
     font: inherit;
     cursor: pointer;
+    outline: none;
 }
 
 
@@ -2682,6 +2684,9 @@ text-align: center;
 
 .textarea__profile.form__field {
     box-sizing: border-box;
+    background: #F6F6F6;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     max-width: 100%;
     min-width: 100%;
     min-height: 80px;
