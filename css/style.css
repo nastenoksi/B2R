@@ -576,8 +576,10 @@ p.card__deposit__value {
 .background__vawe__light {
     background-image: url(../svg/vawe_2.svg);
     width: 100%;
-    height: 40px;
-    background-size: contain;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
 }
 
 /**end catrgory section**/
@@ -775,7 +777,6 @@ h3 {
     background-image: url(../img/bg_footer_yellow.png);
     width: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
     margin-top: -160px;
 }
@@ -1178,6 +1179,10 @@ a.socials__link:hover {
         top: 1rem;
     }
 
+    .background__vawe__light {
+        background-position: bottom;
+    }
+
 
     .advantages__content {
         box-sizing: border-box;
@@ -1559,7 +1564,11 @@ a.socials__link:hover {
         width: 100%;
         margin-left: auto;
         margin-right: auto;
-        overflow: hidden;
+
+    }
+
+    .background__vawe__light {
+        background-position: bottom;
     }
 
     .advantages__content {
