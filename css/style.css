@@ -31,9 +31,9 @@ html {
 }
 
 body {
-      margin: 0;
-      background-color: #fbfbfb;
-           
+    margin: 0;
+    background-color: #fbfbfb;
+    min-width: 320px;
 }
 
 a {
@@ -121,6 +121,8 @@ a.menu__item:hover {
     align-items: center;
     flex-wrap: nowrap;
     width: 180px;
+    cursor: pointer;
+
 }
 
 .city {
@@ -134,6 +136,16 @@ a.menu__item:hover {
     outline: none;
 }
 
+.city::after {
+    content: "";
+    display: block;
+    background-image: url(../svg/arrow_drop_down_white.svg);
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+    background-position: right;
+}
+
 option {
     font-size: 1rem;
     font-family: inherit;
@@ -142,9 +154,6 @@ option {
     outline: none;
 }
 
-.arrow__city__list {
-    cursor: pointer;
-}
 
 .sub__menu {
     display: flex;
